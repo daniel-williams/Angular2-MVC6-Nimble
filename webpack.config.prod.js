@@ -1,6 +1,10 @@
-var webpack = require("webpack"),
-    webpackConfig = require('./webpack.config.js');
+var path = require('path');
+var webpack = require("webpack");
+var webpackConfig = require('./webpack.config.dev.js');
 
+var DIST_PATH = path.resolve('Web/content/bundles');
+
+webpackConfig.output.path =  DIST_PATH;
 webpackConfig.plugins.concat([
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),

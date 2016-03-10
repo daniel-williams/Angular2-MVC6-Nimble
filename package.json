@@ -4,7 +4,7 @@
   "description": "Angular2, Typescript, Webpack... nimble like.",
   "main": "app/main.ts",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.dev.js --devtool eval --progress --colors --content-base Web/",
+    "dev": "rm -rf Web/content/scripts/* && webpack-dev-server --config webpack.config.dev.js  --inline --hot --devtool eval --progress --colors --content-base Web/",
     "deploy": "rm -rf Web/content/bundles/* && webpack --progress --colors --config webpack.config.prod.js -p",
     "postinstall": "typings install"
   },
@@ -14,7 +14,6 @@
     "angular2": "^2.0.0-beta.8",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.33.3",
-    "node-sass": "^3.4.2",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.2",
     "zone.js": "^0.5.15"
@@ -26,6 +25,7 @@
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.9.0",
     "json-loader": "^0.5.4",
+    "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",

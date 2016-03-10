@@ -3,15 +3,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var pkg = require('./package.json');
 
 var PROJECT_PATH = path.resolve(__dirname);
-var APP_ROOT = path.resolve(PROJECT_PATH, 'app');
-var DIST_PATH = path.resolve('Web/content/bundles');
+var APP_PATH = path.resolve(PROJECT_PATH, 'app');
+var WEB_PATH = path.resolve(PROJECT_PATH, 'Web');
+var DIST_PATH = path.resolve(WEB_PATH, 'content/scripts');
 
 
 module.exports = {
     entry: {
-        'app': path.join(APP_ROOT, 'main.ts'),
-        'vendors': path.join(APP_ROOT, 'vendors.ts'),
-        'style': path.join(APP_ROOT, 'styles.scss')
+        'app': path.join(APP_PATH, 'main.ts'),
+        'vendors': path.join(APP_PATH, 'vendors.ts'),
+        'style': path.join(APP_PATH, 'styles.scss')
     },
     output: {
         path: DIST_PATH,
@@ -42,6 +43,6 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         filename: 'index.html',
         pkg: pkg,
-        template: path.join(APP_ROOT, 'index.html')
+        template: path.join(WEB_PATH, 'index.html')
     })]
 };

@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {HomeComponent} from './home.component';
-import {AboutComponent} from './about.component';
+import {HomeComponent} from '../home/home.component';
+import {AboutComponent} from '../about/about.component';
 
 
 @Component({
@@ -10,7 +10,6 @@ import {AboutComponent} from './about.component';
     template: require('./app.component.html'),
     styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./app.component.scss')],
     directives: [ROUTER_DIRECTIVES],
-    providers: [ROUTER_PROVIDERS]
 })
 @RouteConfig([
     {

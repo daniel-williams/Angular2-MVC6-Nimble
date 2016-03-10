@@ -6,4 +6,5 @@ import {Component} from 'angular2/core';
     // styles: [require('./home.component.scss')]
 })
 export class HomeComponent {
+  title:string = 'hot mod';
 }

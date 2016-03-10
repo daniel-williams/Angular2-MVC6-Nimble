@@ -18,6 +18,3 @@ bundle.js
 packages/
 *.suo
 *.user
-
-*.css
-*.map

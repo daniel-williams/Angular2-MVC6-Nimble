@@ -6,4 +6,5 @@ import {Component} from 'angular2/core';
     // styles: [require('./about.component.scss')]
 })
 export class AboutComponent {
+  test: string = 'about that test'
 }
