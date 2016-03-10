@@ -1,0 +1,23 @@
+bower_components/
+node_modules/
+npm-debug.log
+
+typings/
+dist/
+vendor/
+bundles/
+bundle.js
+*.bundle.js
+
+
+
+# visual studio related
+.vscode/
+.vs/
+.nuget/
+packages/
+*.suo
+*.user
+
+*.css
+*.map
