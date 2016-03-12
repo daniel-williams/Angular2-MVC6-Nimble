@@ -8,7 +8,7 @@ import {AboutComponent} from '../about/about.component';
 @Component({
     selector: 'my-app',
     template: require('./app.component.html'),
-    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./app.component.scss')],
+    styles: [require('./app.component.scss')],
     directives: [ROUTER_DIRECTIVES],
 })
 @RouteConfig([
